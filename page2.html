@@ -360,23 +360,19 @@ console.log('All Turbo Features:', allFeatures);
                 </div>
                 
                 <script>
-                    // FAQ toggle functionality
                     function toggleFAQ(button) {
                         const answer = button.nextElementSibling;
                         const isActive = answer.classList.contains('active');
                         
-                        // Close all FAQ answers
                         document.querySelectorAll('.faq-answer').forEach(ans => {
                             ans.classList.remove('active');
                         });
                         
-                        // Open clicked answer if it wasn't already active
                         if (!isActive) {
                             answer.classList.add('active');
                         }
                     }
                     
-                    // Turbo simulator
                     let turboRunning = false;
                     
                     function startTurbo() {
@@ -398,8 +394,7 @@ console.log('All Turbo Features:', allFeatures);
                         status.textContent = 'Engine Off';
                         turboRunning = false;
                     }
-                    
-                    // Smooth scrolling for tech page
+
                     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                         anchor.addEventListener('click', function (e) {
                             e.preventDefault();
@@ -413,7 +408,6 @@ console.log('All Turbo Features:', allFeatures);
                         });
                     });
                     
-                    // Load home page function
                     function loadHomePage() {
                         location.reload();
                     }
@@ -446,7 +440,6 @@ console.log('All Turbo Features:', allFeatures);
             padding: 0 20px;
         }
 
-        /* Navigation */
         nav {
             background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
@@ -503,7 +496,6 @@ console.log('All Turbo Features:', allFeatures);
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
             height: 100vh;
             display: flex;
@@ -580,7 +572,6 @@ console.log('All Turbo Features:', allFeatures);
             box-shadow: 0 10px 20px rgba(0,0,0,0.3);
         }
 
-        /* Features Section */
         .features {
             padding: 100px 0;
             background: rgba(255, 255, 255, 0.1);
@@ -637,7 +628,6 @@ console.log('All Turbo Features:', allFeatures);
             line-height: 1.8;
         }
 
-        /* Blog Section */
         .blog {
             padding: 100px 0;
         }
@@ -701,7 +691,6 @@ console.log('All Turbo Features:', allFeatures);
             font-weight: bold;
         }
 
-        /* Footer */
         footer {
             background: rgba(0, 0, 0, 0.3);
             color: white;
@@ -710,7 +699,6 @@ console.log('All Turbo Features:', allFeatures);
             margin-top: 50px;
         }
 
-        /* Responsive Design */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.5rem;
@@ -729,7 +717,6 @@ console.log('All Turbo Features:', allFeatures);
             }
         }
 
-        /* Interactive Elements */
         .interactive-demo {
             background: rgba(255, 255, 255, 0.1);
             padding: 2rem;
@@ -772,7 +759,6 @@ console.log('All Turbo Features:', allFeatures);
     </style>
 
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -786,7 +772,6 @@ console.log('All Turbo Features:', allFeatures);
             });
         });
 
-        // Interactive boost pressure demo
         const boostSlider = document.getElementById('boostSlider');
         const boostDisplay = document.getElementById('boostDisplay');
 
@@ -796,7 +781,6 @@ console.log('All Turbo Features:', allFeatures);
             boostDisplay.textContent = `${boostValue} PSI (+${powerIncrease}% Power)`;
         });
 
-        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const nav = document.querySelector('nav');
             if (window.scrollY > 100) {
@@ -806,7 +790,6 @@ console.log('All Turbo Features:', allFeatures);
             }
         });
 
-        // Feature cards animation on scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -100px 0px'
@@ -824,14 +807,12 @@ console.log('All Turbo Features:', allFeatures);
             observer.observe(card);
         });
 
-        // JavaScript spread operator demonstration
         const turboFeatures = ['Power Increase', 'Fuel Efficiency', 'Compact Size'];
         const additionalFeatures = ['Reliability', 'Modern Technology', 'Performance'];
         const allFeatures = [...turboFeatures, ...additionalFeatures];
         
         console.log('All Turbo Features:', allFeatures);
-        
-        // Dynamic feature highlighting
+
         setInterval(() => {
             const featureCards = document.querySelectorAll('.feature-card');
             featureCards.forEach(card => {
